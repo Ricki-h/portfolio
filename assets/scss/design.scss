@@ -60,10 +60,14 @@ header {
         @include links($text-color, $white);
         font-family: $text-font;
         font-size: $text-size;
-        
-        img {
-            @include svg-link(0.3, 1)
-        }
+    }
+    #social-medias a {
+        font-size: $big-text-size;
+    }
+
+    #menu-btn {
+        color: $white;
+        font-size: 20px;
     }
 }
 
@@ -101,7 +105,7 @@ main {
         color: $white;
         display: flex;
         padding: 21px 64px;
-        align-items: center;
+        align-items:baseline;
         justify-content: center;
         gap: 10px;
         border-radius: 4px;

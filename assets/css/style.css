@@ -223,12 +223,12 @@ header a {
   font-family: "IBM Plex Mono";
   font-size: 14px;
 }
-header a img {
-  opacity: 0.3;
-  transition: all 0.2s;
+header #social-medias a {
+  font-size: 16px;
 }
-header a img:hover {
-  opacity: 1;
+header #menu-btn {
+  color: #ffffff;
+  font-size: 20px;
 }
 
 @keyframes girar {
@@ -272,7 +272,7 @@ main .btn-green {
   color: #ffffff;
   display: flex;
   padding: 21px 64px;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   gap: 10px;
   border-radius: 4px;
