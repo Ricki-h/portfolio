@@ -12,6 +12,17 @@ $green-shadow: rgba(63, 142, 0, 0.50);
 $h-font: 'Raleway';
 $text-font: "IBM Plex Mono";
 $text-size: 14px;
+$big-text-size: 16px;
+$small-text-size: 12px;
+$display-size: 44px;
+$small-display-size: 32px;
+$subtittle-size: 24px;
+$small-subtitle-siz: 20px;
+
+// Sizes
+$client-logo-w: 160px;
+$small-client-logo-w: 145px;
+$client-logo-h: 60px;
 
 // Mixins
 @mixin links($color, $hover-color) {
@@ -77,13 +88,13 @@ main {
     
     font-family: $text-font;
     h1 {
-        @include texto($h-font, 44px, 800, $white)
+        @include texto($h-font, $display-size, 800, $white)
     }
     h2 {
-        @include texto($h-font, 24px, 200, $white)
+        @include texto($h-font, $subtittle-size, 200, $white)
     }
     p {
-        @include texto($text-font, 14px, 400, $text-color)
+        @include texto($text-font, $text-size, 400, $text-color)
     }
 
     .btn-green {
@@ -105,20 +116,20 @@ main {
         }
 
         span {
-            @include texto($text-font, 16px, 700, $white)
+            @include texto($text-font, $big-text-size, 700, $white)
         }
     }
 }
 
 footer {
     h3 {
-        @include texto($text-font, 14px, 400, $white)
+        @include texto($text-font, $text-size, 400, $white)
     }
     .logo {
         border: solid 1px $bg-gray;
         border-radius: 8px;
-        width: 160px;
-        height: 60px;
+        width: $client-logo-w;
+        height: $client-logo-h;
         transition: all 0.3s;
 
         img {
@@ -138,13 +149,13 @@ footer {
 @media (max-width: 1100px) {
     main {
         h1 {
-            @include texto($h-font, 32px, 800, $white)
+            @include texto($h-font, $small-display-size, 800, $white)
         }
         h2 {
-            @include texto($h-font, 20px, 200, $white)
+            @include texto($h-font, $small-subtitle-siz, 200, $white)
         }
         p {
-            @include texto($text-font, 12px, 400, $text-color)
+            @include texto($text-font, $small-text-size, 400, $text-color)
         }
         #personal-img {
             width: 250px;
@@ -153,7 +164,7 @@ footer {
     }
     footer {
         .logo {
-            width: 145px;
+            width: $small-client-logo-w;
         }
     }
 }
@@ -177,12 +188,6 @@ footer {
         text-align: center;
         .btn-green {
             width: 100%;
-        }
-    }
-
-    footer {
-        .logo {
-            width: 145px;
         }
     }
 }
